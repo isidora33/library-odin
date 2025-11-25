@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Libraby - Odin</title>
+  </head>
+  <body>
+    <div id="library"></div>
+    <p id="emptyMsg" class="bookCard">No books yet — add your first one!</p>
+    <button id="newBook">new book</button>
+    <dialog id="dialog">
+      <form method="dialog" id="newBookForm">
+        <h2>Add New Book</h2>
+
+        <label>
+          Title:
+          <input type="text" id="bookTitle" required />
+        </label>
+
+        <label>
+          Author:
+          <input type="text" id="bookAuthor" required />
+        </label>
+
+        <label>
+          Number of pages:
+          <input type="number" id="bookPages" min="1" required />
+        </label>
+
+        <label>
+          Already read?
+          <input type="checkbox" id="bookRead" />
+        </label>
+
+        <label>
+          Notes:
+          <textarea id="bookNotes"></textarea>
+        </label>
+        <p id="errorMsg">Data not entered correctly.</p>
+
+        <menu>
+          <button value="cancel" id="cancelBtn">Cancel</button>
+          <button value="confirm" id="confirmBtn">Add Book</button>
+        </menu>
+      </form>
+    </dialog>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
